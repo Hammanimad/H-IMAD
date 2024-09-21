@@ -1,0 +1,223 @@
+/*-----------------------------------------------------------------------------------
+
+  Theme Name: Ractic Creative HTML 5 Template
+  Author: Creative-hunk
+  Support: 
+  Description: Ractic Creative HTML 5 Template
+  Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. common
+	2. header
+	3. hero
+	4. category
+	5. about
+	6. service
+	7. counter
+	8. skills
+	9. portfolio
+	10. testimonial
+	11. blog
+	12. contact
+	13. map
+	14. footer
+
+
+
+-----------------------------------------------------------------------------------*/
+
+// Font Family 
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
+/*
+
+==================================
+    1. common
+==================================
+
+*/
+
+
+body {
+	font-family: $bodyFont;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	color: var(--black-1);
+	overflow-x: hidden;
+}
+
+:root {
+	--animate-delay: 0.5s;
+}
+
+.my-element {
+	--animate-duration: 0.5s;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--primary);
+	height: 100px;
+
+}
+
+.img,
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+.button {
+	transition: .3s;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a,
+button {
+	color: inherit;
+	outline: medium none;
+}
+
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+	outline: 0
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $bodyFont;
+	color: var(--black-2);
+	font-weight: normal;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none
+}
+
+p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.75rem;
+	color: var(--black-1);
+	margin-bottom: 15px;
+	text-transform: capitalize;
+}
+
+hr {
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+
+label {
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+
+*::-moz-selection {
+	text-shadow: none;
+}
+
+::-moz-selection {
+	text-shadow: none;
+}
+
+::selection {
+	text-shadow: none;
+	color: #ffff;
+	background: var(--black-2);
+}
+
+.transparent-header{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40px;
+}
+a:hover{
+	color: inherit;
+}

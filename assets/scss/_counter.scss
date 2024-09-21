@@ -1,0 +1,36 @@
+/*
+	7. counter
+*/
+
+.counter{
+    &__area{
+        &-1{
+            background:linear-gradient(94.16deg, #FF451B -32.52%, #FFB324 134.52%);
+            padding: 110px 0;
+            margin-bottom: 100px;
+        }
+    }
+}
+.counter{
+    text-align: center;
+    position: relative;
+    &__volume{
+        font-weight: 700;
+        font-size: 72px;
+        color: var(--white);
+        font-family: $bodyFont;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 32px;
+        color: var(--white);
+        font-family: $bodyFont;
+    }
+    &__plus{
+        font-weight: 700;
+        font-size: 42px;
+        position: absolute;
+        right: 39px;
+        top: -13px;
+    }
+}

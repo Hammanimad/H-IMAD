@@ -1,0 +1,144 @@
+.karti{
+   &__skill{
+      background-color: var(--black-2);
+      padding: 120px 0;
+      @include mq(md){
+         padding: 50px 0;
+      }
+      *{
+         color: var(--white);
+      }
+      &-items{
+         display: grid;
+         grid-template-columns: auto auto;
+         @include mq(sm){
+            grid-template-columns: auto;
+            justify-content: center;
+         }
+      }
+      &-item{
+         border: 0.25px solid var(--white);
+         border-radius: 120px;
+         width: 248px;
+         height: 314px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         margin-bottom: 30px;
+         transition: .3s linear;
+         cursor: pointer;
+         @include mq(xl){
+            width: 200px;
+            height: 200px;
+         }
+         &:hover{
+            box-shadow: 6px 6px 0px #A347FF;
+         }
+         img{
+            padding-bottom: 20px;
+            @include mq(xl){
+               max-width: 20%;
+            }
+            @include mq(sm){
+               max-width: 38px;
+            }
+         }
+         h4{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.4;
+            @include mq(sm){
+               font-size: 18px;
+            }
+            span{
+               color: #999999;
+            }
+         }
+      }
+      &-ritem{
+         border: 0.5px solid #CFCFCF;
+         padding: 30px 20px;
+         display: grid;
+         grid-template-columns: .25fr auto .6fr;
+         transition: .3s linear;
+         margin-bottom: 25px;
+         &.skill-s{
+            @include mq(sm){
+               grid-template-columns: auto;
+            }
+            .karti__skill-right{
+               text-align: right;
+               @include mq(sm){
+                  text-align: left;
+               }
+            }
+            // .karti__skill-right{
+            //    text-align: left;
+            // }
+         }
+         @include mq(xl){
+            padding: 8px 20px;
+         }
+         &:hover{
+            box-shadow: 6px 6px 0px #A347FF;
+            @include mq(sm){
+               box-shadow: unset;
+               border: 0;
+            }
+         }
+      }
+      &-left{
+         width: 70px;
+         height: 70px;
+         border-radius: 50%;
+         @include mq(xl){
+            margin-right: 10px;
+         }
+         @include mq(sm){
+            margin-bottom: 15px;
+         }
+      }
+      &-center{
+         text-align: left;
+         h2{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 1.2;
+            color: #CFCFCF;
+            @include mq(xl){
+               font-size: 18px;
+            }
+            @include mq(sm){
+               font-size: 18px;
+            }
+         }
+         p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #CFCFCF;
+            margin: 0;
+         }
+      }
+      &-right{
+         text-align: right;
+         align-self: end;
+         @include mq(sm){
+            text-align: right;
+            padding-top: 0;
+            align-self: flex-start;
+            i{
+               color: var(--white);
+            }
+         }
+         i{
+            transform: rotate(-45deg);
+            font-size: 25px;
+         }
+         p{
+            margin: 0;
+         }
+      }
+   }
+}

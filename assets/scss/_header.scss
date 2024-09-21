@@ -1,0 +1,124 @@
+/*
+	2. header
+*/
+.header{
+    &__inner{
+        &-1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 999;
+            @media (max-width:991px){
+                display: none;
+            }
+        }
+    }
+    &__menu{
+        &-1{
+            margin: 0;
+            padding: 0;
+            li{
+                display: inline-block;
+                margin-right: 30px;
+                @include mq(xl){
+                    margin-right: 5px;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 21px;
+                    color: var(--black-1);
+                    transition: .3s ease;
+                    &:hover{
+                        color: var(--theme);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+    mobile menu css
+*/
+.responsive_mobile_menu{
+    background-color: var(--primary);
+    @media (min-width:991px){
+        display: none;
+    }
+}
+.mobile_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.mobile_info_open {
+    max-width: 300px;
+    background: var(--white);
+    padding: 23px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    left: -300px;
+    z-index: 9;
+    transition: .3s ease;
+}
+.mobile_info_open.show{
+    left: 0;
+}
+.mobile_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.mobile-logo img {
+    width: 100px;
+}
+.mobile-menu li{
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10px;
+}
+
+.mobile-menu li a {
+    color: var(--black-2);
+}
+
+// stickey header 
+
+.header-sticky.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 99;
+    padding: 15px 0;
+}
+
+// create overlay 
+.offcanvas-overlay{
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+.offcanvas-overlay.overlay-open{
+    opacity: 1;
+    visibility: visible;
+}
+.mobile-logo img {
+    width: 70px;
+}

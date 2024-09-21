@@ -1,0 +1,86 @@
+.karti{
+   &__clients{
+      background-color: var(--black-2);
+      padding: 120px 0;
+      @include mq(md){
+         padding: 50px 0;
+      }
+      &-wrapper{
+         position: relative;
+         padding: 250px 0;
+         &::before{
+            content: "";
+            background-image: url('../img/map/map.png');
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+         }
+      }
+      &-item{
+         height: 100px;
+         overflow: hidden;
+         &:nth-child(1){
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            animation: float-bob-y 2s infinite;
+         }
+         &:nth-child(2){
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            animation: float-bob-y 2.3s infinite;
+
+         }
+         &:nth-child(3){
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            animation: float-bob-y 2.5s infinite;
+         
+         }
+         &:nth-child(4){
+            position: absolute;
+            left: 70%;
+            top: 10%;
+            animation: float-bob-y 1.8s infinite;
+         
+         }
+         &:nth-child(5){
+            position: absolute;
+            left: 80%;
+            top: 40%;
+            animation: float-bob-y 2.9s infinite;
+         }
+         &:nth-child(6){
+            position: absolute;
+            left: 80%;
+            bottom: 0;
+            animation: float-bob-y 2.4s infinite;
+         }
+         &:nth-child(7){
+            position: absolute;
+            right: 30%;
+            top: 50%;
+            animation: float-bob-y 2.7s infinite;
+
+         }
+         &:nth-child(8){
+            position: absolute;
+            animation: float-bob-y 3s infinite;
+         }
+         img{
+            display: block;
+            margin-bottom: 5px;
+         }
+         span{
+            color: var(--white);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.4;
+         }
+      }
+   }
+}

@@ -1,0 +1,149 @@
+.karti{
+   &__service{
+      padding: 150px 0;
+      @include mq(lg){
+         padding-bottom: 90px;
+      }
+      @include mq(md){
+         padding: 50px 0;
+      }
+      &-item{
+         display: grid;
+         grid-template-columns: 60px auto 70px;
+         border-bottom: 1px solid #999999;
+         padding-bottom: 30px;
+         margin-bottom: 30px;
+         position: relative;
+         cursor: none;
+         // overflow: hidden;
+         .bg-img {
+            position: absolute;
+            width: 220px;
+            height: 290px;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: opacity 0.5s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            margin-top: -145px;
+            margin-left: -110px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 3;
+          }
+         @include mq(sm){
+            grid-template-columns: 90px auto 90px;
+         }
+         &:hover{
+            .karti__service-thumb{
+               transform: scale(1);
+            }
+            .karti__service-arrowright{
+               box-shadow: 2px 2px 0px #A347FF;
+           }
+           .bg-img {
+            opacity: 1;
+          }
+         }
+      }
+      &-brand{
+         background: linear-gradient(90deg, #FF91FA 0%, #FA6490 32.81%, #CA6AF7 93.23%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+         font-weight: 600;
+         font-size: 32px;
+         line-height: 1.3;
+      }
+      // &-thumb{
+      //    position: absolute;
+      //    left: 0;
+      //    top: -50%;
+      //    width: 200px;
+      //    transition: .3s linear;
+      //    transform: scale(0);
+      //    z-index: 99;
+      //    @include mq(sm){
+      //       height: 100%;
+      //       width: 38%;
+      //    }
+      // }
+      &-middle{
+         span{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.2;
+            color: var(--black-1);
+         }
+         h2{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 1.2;
+            color: var(--black-1);
+            @include mq(sm){
+               font-size: 22px;
+            }
+         }
+      }
+      &-arrowright{
+         border: 0.5px solid #999999;
+         border-radius: 30px;
+         display: inline-block;
+         width: 60px;
+         height: 60px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transform: rotate(-30deg);
+         &:hover{
+            box-shadow: 2px 2px 0px #A347FF;
+         }
+      }
+      &-right{
+         padding-left: 110px;
+         @include mq(md){
+            padding-left: 0;
+         }
+      }
+      &-titleright{
+         font-weight: 700;
+         font-size: 42px;
+         line-height: 50px;
+         color: var(--primary);
+         @include mq(sm){
+            font-size: 25px;
+         }
+      }
+      &-dis{
+         font-weight: 500;
+         font-size: 16px;
+         line-height: 1.5;
+         color: #767676;
+         margin-bottom: 60px;
+         @include mq(sm){
+            padding-top: 10px;
+         }
+      }
+   }
+}
+
+.karti__service-images{
+   position: relative;
+   @include mq(sm){
+      display: none;
+   }
+   img{
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      z-index: -1;
+      transform: scale(.80);
+   }
+}
+.karti__service-thumb{
+   width: 200px;
+   height: 160px;
+   top: 50%;
+   transform: translateY(-50%);
+}
